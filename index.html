@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Steam Games to JSON</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Steam Games to JSON</h1>
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="steamId">Steam ID:</label>
+                    <input type="text" id="steamId" placeholder="Enter your Steam ID">
+                    <div class="help-text">
+                        (Find your Steam ID by going to your Steam profile and copying the number from the URL)
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="apiKey">Steam API Key:</label>
+                    <input type="text" id="apiKey" placeholder="Enter your Steam API Key">
+                    <div class="help-text">
+                        (Get your API key from
+                        <a href="https://steamcommunity.com/dev/apikey" target="_blank">Steam Web API</a>)
+                    </div>
+                </div>
+                <button id="fetchGames">Fetch Games</button>
+            </div>
+            <div class="output-section">
+                <h2>Your Games Data</h2>
+                <pre id="output"></pre>
+                <button id="copyJson" class="hidden">Copy JSON</button>
+                <div id="copyMessage" class="copy-message hidden">JSON copied to clipboard!</div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
